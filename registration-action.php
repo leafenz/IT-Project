@@ -1,39 +1,44 @@
 <?php
-include "header.php";
-?>
-<?php
-function sanitizeInput($data) {
-    global $conn;
-    return mysqli_real_escape_string($conn, htmlspecialchars($data));
-}
+include "db_connection.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $salutation = sanitizeInput($_POST["salutation"]);
-    $firstname = sanitizeInput($_POST["fname"]);
-    $lastname = sanitizeInput($_POST["lname"]);
-    $email = sanitizeInput($_POST["email"]);
-    $username = sanitizeInput($_POST["username"]);
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    $birthday = sanitizeInput($_POST["birthday"]);
+if(isset($_POST['submit'])) {
+    $salutation = $_POST['salutation'];
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $email = $_POST['email'];
+    $username = $_POST['username'];
+    $birthday = $_POST['birthday'];
+    $password = $_POST['password'];
+    $repeat_password = $_POST['repeat_password'];
 
-    $checkExisting = "SELECT * FROM users WHERE email = '$email' OR username = '$username'";
-    $result = $conn->query($checkExisting);
-
-    if ($result->num_rows > 0) {
-        echo "Error: Email or username already exists. Please choose a different one.";
-    } else {
-        $currentDateTime = date("Y-m-d H:i:s");
-
-        $sql = "INSERT INTO users (salutation, firstname, lastname, email, username, passwordSHA, birthday, acc_created) VALUES ('$salutation', '$firstname', '$lastname', '$email', '$username', '$password', '$birthday', '$currentDateTime')";
-
-        if ($conn->query($sql) === TRUE) {
-            echo "User registered successfully!";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+    if ($password !== $repeat_password) {
+        echo "Passwords do not match!";
+        exit;
     }
+
+    $passwordSHA = hash('sha256', $password);
+
+    $sex = "";
+    if ($salutation === "woman") {
+        $sex = "F";
+    } elseif ($salutation === "men") {
+        $sex = "M";
+    } elseif ($salutation === "divers") {
+        $sex = "D";
+    }
+
+    $stmt = $conn->prepare("INSERT INTO users (username, firstname, lastname, passwordSHA, birthdate, sex, email) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssssss", $username, $fname, $lname, $passwordSHA, $birthday, $sex, $email);
+
+    if ($stmt->execute()) {
+        echo "Registration successful!";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    $stmt->close();
+} else {
+    header("Location: registration.php");
+    exit;
 }
-?>
-<?php
-include "footer.php";
 ?>
