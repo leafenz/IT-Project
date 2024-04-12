@@ -3,52 +3,44 @@
 ?>
 <h1>Registrierung</h1>
 
-<!-- Form for the whole registration-process -->
-<form name="registrieren" action="..." method="post">
-    <div>
-        <label for=""></label><br>
-        <label for="female">
-            <input type="radio" id="female" name="gender" value="w">
-            Weiblich
-        </label><br>
-        <label for="male">
-            <input type="radio" id="male" name="gender" value="m">
-            Männlich
-        </label><br>
-        <label for="diverse">
-            <input type="radio" id="diverse" name="gender" value="d">
-            Divers
-        </label>
-    </div>
-    <div>
-        <label for="vorname">Vorname:</label><br>
-        <input type="text" id="vorname" name="vorname" required><br>
-    </div>
-    <div>
-        <label for="nachname">Nachname:</label><br>
-        <input type="text" id="nachname" name="nachname" required><br>
-    </div>
-    <div>
-        <label for="email">E-Mail-Adresse:</label><br>
-        <input type="email" id="email" name="email" required><br>
-    </div>
-    <div>
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br>
-    </div>
-    <input type="hidden" id="typ" name="typ" value="1">
-    <div>
-        <label for="password">Passwort:</label><br>
-        <input type="password" id="password" name="password" required><br>
-        <label for="passwordwie">Passwort wiederholen:</label><br>
-        <input type="password" id="password-repeat" name="password-repeat" required><br>
-    </div><br>
-    <div>
-
-    </div>
-    <button>Registrieren</button>
-</form>
-
+    <form action="....php" method="POST">
+        <div class="infotext">
+            Salutation: <br>
+            <input type="radio" id="woman" name="salutation" value="woman">
+            <label for="woman">Woman</label><br>
+            <input type="radio" id="men" name="salutation" value="men">
+            <label for="men">Men</label><br>
+            <input type="radio" id="divers" name="salutation" value="divers">
+            <label for="divers">Divers</label><br>
+            <label for="fname">First Name:</label>
+            <input type="text" name="fname" id="fname" required>
+            <br>
+            <label for="lname">Last Name:</label>
+            <input type="text" name="lname" id="lname" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required>
+            <br>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username"required>
+            <br>
+            <br>
+            <label for="birthday">Birthday:</label>
+            <input type="date" name="birthday" id="birthday"required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+            <br>
+            <label for="password">Repeat password:</label>
+            <input type="password" name="password" id="password" required>
+            <br>
+            <input type="submit" name="submit" id="submit" value="Submit">
+        </div>
+    
+    
+    </form>
+</body>
+</html>
 <?php
     include "footer.php";
 ?>
