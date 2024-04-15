@@ -19,7 +19,7 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../ITP_Group8_BOOKWARM/css/style.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -33,10 +33,11 @@
                         <li class="nav-item"><a class="nav-link" href="index.php#services">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="viewBook.php">Book Gallery</a></li>
                         <?php
-                            if(isset($_SESSION["loged"])){
+                            if(isset($_SESSION['username'])){
                                 echo '<li class="nav-item"><a class="nav-link" href="addBook.php">Add Books</a></li>';
-                                echo '<li class="nav-item"><a class="nav-link" href="#">'.$_SESSION['firstname'].' '.$_SESSION['lastname'].'</a></li>';                                
+                                //echo '<li class="nav-item"><a class="nav-link" href="#">'.$_SESSION['username'].'</a></li>';   -> will be changed to userpage                             
                                 echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
+                                echo '<p>hello '.$_SESSION['username'].'!!!</p>';
                             }
                             else{
                                 echo '<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>';
