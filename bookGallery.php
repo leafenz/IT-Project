@@ -7,18 +7,25 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$genreFilter = "";
+$conditions = array();
+
 if (isset($_GET['genre']) && !empty($_GET['genre'])) {
-    $genreFilter = "WHERE genre='" . mysqli_real_escape_string($conn, $_GET['genre']) . "'";
+    $genre = mysqli_real_escape_string($conn, $_GET['genre']);
+    $conditions[] = "genre='$genre'";
 }
 
-$searchFilter = "";
 if (isset($_GET['search']) && !empty($_GET['search'])) {
     $searchTerm = mysqli_real_escape_string($conn, $_GET['search']);
-    $searchFilter = "AND (title LIKE '%$searchTerm%' OR author LIKE '%$searchTerm%' OR genre LIKE '%$searchTerm%')";
+    $searchCondition = "(title LIKE '%$searchTerm%' OR author LIKE '%$searchTerm%' OR genre LIKE '%$searchTerm%')";
+    $conditions[] = $searchCondition;
+}
+$whereClause = '';
+if (!empty($conditions)) {
+    $whereClause = 'WHERE ' . implode(' AND ', $conditions);
 }
 
-$query = "SELECT * FROM books $genreFilter $searchFilter";
+$query = "SELECT * FROM books $whereClause";
+
 $result = mysqli_query($conn, $query);
 ?>
 
