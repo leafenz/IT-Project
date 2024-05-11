@@ -28,10 +28,10 @@
         <h6 class="text-uppercase font-weight-bold">Sites</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p>
-        <a href="about.php">About</a>
+        <a href="index.php#about">About</a>
         </p>
         <p>
-          <a href="services.php">Services</a>
+          <a href="index.php#services">Services</a>
         </p>
 
       </div>
