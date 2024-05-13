@@ -1,7 +1,6 @@
 <?php
 include "db_connection.php";
 
-// Check if the user is logged in
 session_start();
 if (!isset($_SESSION['username'])) {
     header("Location: login.php"); // Redirect to the login page if not logged in
@@ -9,20 +8,26 @@ if (!isset($_SESSION['username'])) {
 }
 
 $username = $_SESSION['username'];
-$userID = "SELECT userID.* FROM users
-        WHERE username = $username";
 
-// Query to select all books associated with the user from the readBooks table
-$username = $_SESSION['username'];
-$sql = "SELECT books.* FROM books 
-        INNER JOIN readBooks ON books.bookID = readBooks.bookID 
-        WHERE readBooks.userID = $userID";
+// Query to select all user information based on username
+$sql = "SELECT * FROM users WHERE username = ?";
 
-$result = mysqli_query($conn, $sql);
+// Prepare the SQL statement
+$stmt = mysqli_prepare($conn, $sql);
 
-// Check if any books were found
+// Bind parameters
+mysqli_stmt_bind_param($stmt, "s", $username);
+
+// Execute the statement
+mysqli_stmt_execute($stmt);
+
+// Get the result
+$result = mysqli_stmt_get_result($stmt);
+
+// Check if user exists
 if (mysqli_num_rows($result) > 0) {
-    // Start HTML output
+    // Fetch user data
+    $userData = mysqli_fetch_assoc($result);
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -33,22 +38,24 @@ if (mysqli_num_rows($result) > 0) {
     </head>
     <body>
         <h1>User Profile</h1>
-        <h2>Books Read:</h2>
+        <h2>User Information:</h2>
         <ul>
-            <?php
-            // Output each book as a list item
-            while ($row = mysqli_fetch_assoc($result)) {
-                echo "<li>{$row['title']} by {$row['author']}</li>";
-            }
-            ?>
+            <li>User ID: <?php echo $userData['userID']; ?></li>
+            <li>Username: <?php echo $userData['username']; ?></li>
+            <li>First Name: <?php echo $userData['firstname']; ?></li>
+            <li>Last Name: <?php echo $userData['lastname']; ?></li>
+            <li>Birthdate: <?php echo $userData['birthdate']; ?></li>
+            <li>Type: <?php echo $userData['type']; ?></li>
+            <li>Sex: <?php echo $userData['sex']; ?></li>
+            <li>Email: <?php echo $userData['email']; ?></li>
         </ul>
         <a href="logout.php">Logout</a> <!-- Add a logout link -->
     </body>
     </html>
     <?php
 } else {
-    // If no books found, display a message
-    echo "<p>No books found for this user.</p>";
+    // If no user found, display a message
+    echo "<p>User not found.</p>";
 }
 
 // Close the database connection
