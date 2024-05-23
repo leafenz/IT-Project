@@ -40,16 +40,27 @@ if (mysqli_num_rows($result) > 0) {
         <h1>User Profile</h1>
         <h2>User Information:</h2>
         <ul>
-            <li>User ID: <?php echo $userData['userID']; ?></li>
             <li>Username: <?php echo $userData['username']; ?></li>
+            <li>Email: <?php echo $userData['email']; ?></li>
             <li>First Name: <?php echo $userData['firstname']; ?></li>
             <li>Last Name: <?php echo $userData['lastname']; ?></li>
             <li>Birthdate: <?php echo $userData['birthdate']; ?></li>
-            <li>Type: <?php echo $userData['type']; ?></li>
             <li>Sex: <?php echo $userData['sex']; ?></li>
-            <li>Email: <?php echo $userData['email']; ?></li>
         </ul>
         <a href="logout.php">Logout</a> <!-- Add a logout link -->
+
+        <div class="container">
+            <div class="books-list">
+                <h2>Books to Read</h2>
+                <!-- List of books to read goes here -->
+                <a href="bookGallery.php" class="add-book-button">Add New Book</a>
+            </div>
+
+            <div class="books-list">
+                <h2>Read Books</h2>
+                <!-- List of read books goes here -->
+            </div>
+        </div>
     </body>
     </html>
     <?php
