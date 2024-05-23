@@ -31,7 +31,7 @@
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="index.php#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="index.php#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="viewBook.php">Book Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="bookGallery.php">Book Gallery</a></li>
                         <?php
                             if(isset($_SESSION['username'])){
                                 echo '<li class="nav-item"><a class="nav-link" href="addBook.php">Add Books</a></li>';
