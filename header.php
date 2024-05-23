@@ -35,7 +35,7 @@
                         <?php
                             if(isset($_SESSION['username'])){
                                 echo '<li class="nav-item"><a class="nav-link" href="addBook.php">Add Books</a></li>';
-                                //echo '<li class="nav-item"><a class="nav-link" href="#">'.$_SESSION['username'].'</a></li>';   -> will be changed to userpage                             
+                                echo '<li class="nav-item"><a class="nav-link" href="userProfile.php">'.$_SESSION['username']."'s profile</a></li>";                             
                                 echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
                                 echo '<p>hello '.$_SESSION['username'].'!!!</p>';
                             }
