@@ -53,8 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     mysqli_stmt_bind_param($insertStmt, 'ii', $userID, $bookID);
 
                     if (mysqli_stmt_execute($insertStmt)) {
-                        echo "Book successfully added to your 'Books to Read' list.";
-                        
+                        header("Location: bookGallery.php");
                     } else {
                         echo "Error: " . mysqli_stmt_error($insertStmt);
                     }
@@ -65,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     echo "Error preparing insert statement: " . mysqli_error($conn);
                 }
             } else {
-                echo "This book is already in your 'Books to Read' list.";
+                header("Location: bookGallery.php");
                 mysqli_stmt_close($stmt);
             }
         } else {
