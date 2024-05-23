@@ -31,7 +31,7 @@ if(isset($_POST['submit'])) {
     $stmt->bind_param("sssssss", $username, $fname, $lname, $passwordSHA, $birthday, $sex, $email);
 
     if ($stmt->execute()) {
-        echo "Registration successful!";
+        header("Location: login.php");
     } else {
         echo "Error: " . $stmt->error;
     }
