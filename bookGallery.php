@@ -91,23 +91,61 @@ $result = mysqli_query($conn, $query);
                     <td><?php echo $row['synopsis']; ?></td>
                     <td><img src="/pictures/<?php echo $row['cover']; ?>" alt="Cover" width="100"></td>
                     <td>
-                        <?php if (isset($_SESSION['username'])): ?>
+                        <?php
+                        $username = $_SESSION['username'];
+                        $sql = "SELECT userID FROM users WHERE username = ?";
+                    
+                        if ($stmt = mysqli_prepare($conn, $sql)) {
+                            // Bind the username parameter to the statement
+                            mysqli_stmt_bind_param($stmt, "s", $username);
+                    
+                            // Execute the statement
+                            mysqli_stmt_execute($stmt);
+                    
+                            // Bind the result variable
+                            mysqli_stmt_bind_result($stmt, $userID);
+                    
+                            // Fetch the userID
+                            mysqli_stmt_fetch($stmt);
+                    
+                            // Close the statement
+                            mysqli_stmt_close($stmt);
+                    
+                        $bookID = $row['bookID'];
+
+                        $checkBookToReadQuery = "SELECT * FROM bookstoread WHERE userID='$userID' AND bookID='$bookID'";
+                        $checkReadBooksQuery = "SELECT * FROM readbooks WHERE userID='$userID' AND bookID='$bookID'";
+
+                        $bookToReadResult = mysqli_query($conn, $checkBookToReadQuery);
+                        $readBooksResult = mysqli_query($conn, $checkReadBooksQuery);
+
+                        if (mysqli_num_rows($readBooksResult) > 0) {
+                            echo "Completed";
+                        } elseif (mysqli_num_rows($bookToReadResult) > 0) {
+                            ?>
+                            <form action="moveToFinished.php" method="post">
+                                <input type="hidden" name="book_id" value="<?php echo $row['bookID']; ?>">
+                                <button type="submit">Finished!</button>
+                            </form>
+                            <?php
+                        } else {
+                            ?>
                             <form action="addToRead.php" method="post">
                                 <input type="hidden" name="book_id" value="<?php echo $row['bookID']; ?>">
                                 <button type="submit">Add to "Books to Read"</button>
                             </form>
-                        <?php endif; ?>
+                            <?php
+                        }}
+                        ?>
                     </td>
                 </tr>
             <?php endwhile; ?>
         </table>
-    <?php else: ?>
-        <p>No books available</p>
     <?php endif; ?>
-
 </body>
 </html>
 
 <?php
+include "footer.php";
 mysqli_close($conn);
 ?>
