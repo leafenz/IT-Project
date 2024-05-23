@@ -89,7 +89,7 @@ $result = mysqli_query($conn, $query);
                     <td><?php echo $row['publishYear']; ?></td>
                     <td><?php echo $row['language']; ?></td>
                     <td><?php echo $row['synopsis']; ?></td>
-                    <td><img src="<?php echo "pictures/" . $row['cover']; ?>" alt="Cover" width="100"></td>
+                    <td><img src="<?php echo $row['cover']; ?>" alt="Cover" width="100"></td>
                     <td>
                         <?php if (isset($_SESSION['username'])): ?>
                             <form action="addToRead.php" method="post">
