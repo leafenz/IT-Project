@@ -89,7 +89,7 @@ $result = mysqli_query($conn, $query);
                     <td><?php echo $row['publishYear']; ?></td>
                     <td><?php echo $row['language']; ?></td>
                     <td><?php echo $row['synopsis']; ?></td>
-                    <td><img src="/pictures/<?php echo $row['cover']; ?>" alt="Cover" width="100"></td>
+                    <td><img src="pictures/<?php echo $row['cover']; ?>" alt="Cover" width="100"></td>
                     <td>
                         <?php
                         $username = $_SESSION['username'];
@@ -141,6 +141,8 @@ $result = mysqli_query($conn, $query);
                 </tr>
             <?php endwhile; ?>
         </table>
+    <?php else: ?>
+        <p>No books available</p>
     <?php endif; ?>
 </body>
 </html>

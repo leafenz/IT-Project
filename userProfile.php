@@ -62,12 +62,12 @@ if (mysqli_num_rows($result) > 0) {
         <h1>User Profile</h1>
         <h2>User Information:</h2>
         <ul>
-            <li>Username: <?php echo $userData['username']; ?></li>
-            <li>Email: <?php echo $userData['email']; ?></li>
-            <li>First Name: <?php echo $userData['firstname']; ?></li>
-            <li>Last Name: <?php echo $userData['lastname']; ?></li>
-            <li>Birthdate: <?php echo $userData['birthdate']; ?></li>
-            <li>Sex: <?php echo $userData['sex']; ?></li>
+            <li>Username: <?php echo htmlspecialchars($userData['username']); ?></li>
+            <li>Email: <?php echo htmlspecialchars($userData['email']); ?></li>
+            <li>First Name: <?php echo htmlspecialchars($userData['firstname']); ?></li>
+            <li>Last Name: <?php echo htmlspecialchars($userData['lastname']); ?></li>
+            <li>Birthdate: <?php echo htmlspecialchars($userData['birthdate']); ?></li>
+            <li>Sex: <?php echo htmlspecialchars($userData['sex']); ?></li>
         </ul>
         <a href="logout.php">Logout</a>
 
@@ -100,10 +100,10 @@ if (mysqli_num_rows($result) > 0) {
                     while ($book = mysqli_fetch_assoc($resultBooksToRead)) {
                         ?>
                         <li>
-                            <img src="<?php echo $book['cover']; ?>" alt="Cover" width="100">
-                            <strong><?php echo $book['title']; ?></strong> by <?php echo $book['author']; ?>
+                            <img src="pictures/<?php echo htmlspecialchars($book['cover']); ?>" alt="Cover" width="100">
+                            <strong><?php echo htmlspecialchars($book['title']); ?></strong> by <?php echo htmlspecialchars($book['author']); ?>
                             <form method="POST" style="display:inline;">
-                                <input type="hidden" name="bookID" value="<?php echo $book['bookID']; ?>">
+                                <input type="hidden" name="bookID" value="<?php echo htmlspecialchars($book['bookID']); ?>">
                                 <button type="submit" name="finished">Finished!</button>
                             </form>
                         </li>
@@ -143,8 +143,8 @@ if (mysqli_num_rows($result) > 0) {
                     while ($book = mysqli_fetch_assoc($resultReadBooks)) {
                         ?>
                         <li>
-                            <img src="<?php echo $book['cover']; ?>" alt="Cover" width="100">
-                            <strong><?php echo $book['title']; ?></strong> by <?php echo $book['author']; ?>
+                            <img src="pictures/<?php echo htmlspecialchars($book['cover']); ?>" alt="Cover" width="100">
+                            <strong><?php echo htmlspecialchars($book['title']); ?></strong> by <?php echo htmlspecialchars($book['author']); ?>
                         </li>
                         <?php
                     }
