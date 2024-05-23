@@ -29,6 +29,27 @@ if (mysqli_num_rows($result) > 0) {
     // Fetch user data
     $userData = mysqli_fetch_assoc($result);
     $userID = $userData['userID']; // Get the userID
+    
+    // Handle the "finished!" button click
+    if (isset($_POST['finished'])) {
+        $bookID = $_POST['bookID'];
+
+        // Remove the book from bookstoread
+        $deleteSql = "DELETE FROM bookstoread WHERE userID = ? AND bookID = ?";
+        $deleteStmt = mysqli_prepare($conn, $deleteSql);
+        mysqli_stmt_bind_param($deleteStmt, "ii", $userID, $bookID);
+        mysqli_stmt_execute($deleteStmt);
+
+        // Add the book to readbooks
+        $insertSql = "INSERT INTO readbooks (userID, bookID) VALUES (?, ?)";
+        $insertStmt = mysqli_prepare($conn, $insertSql);
+        mysqli_stmt_bind_param($insertStmt, "ii", $userID, $bookID);
+        mysqli_stmt_execute($insertStmt);
+
+        // Redirect to refresh the page
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit();
+    }
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -57,7 +78,7 @@ if (mysqli_num_rows($result) > 0) {
                 <ul>
                 <?php
                 // Query to get books to read for the user
-                $sqlBooksToRead = "SELECT b.title, b.cover, b.author FROM bookstoread br
+                $sqlBooksToRead = "SELECT b.bookID, b.title, b.cover, b.author FROM bookstoread br
                                    JOIN books b ON br.bookID = b.bookID
                                    WHERE br.userID = ?";
                 
@@ -79,8 +100,12 @@ if (mysqli_num_rows($result) > 0) {
                     while ($book = mysqli_fetch_assoc($resultBooksToRead)) {
                         ?>
                         <li>
-                            <img src="<?php echo $row['cover']; ?>" alt="Cover" width="100">
+                            <img src="<?php echo $book['cover']; ?>" alt="Cover" width="100">
                             <strong><?php echo $book['title']; ?></strong> by <?php echo $book['author']; ?>
+                            <form method="POST" style="display:inline;">
+                                <input type="hidden" name="bookID" value="<?php echo $book['bookID']; ?>">
+                                <button type="submit" name="finished">Finished!</button>
+                            </form>
                         </li>
                         <?php
                     }
@@ -93,7 +118,41 @@ if (mysqli_num_rows($result) > 0) {
 
             <div class="books-list">
                 <h2>Read Books</h2>
-                <!-- List of read books goes here -->
+                <ul>
+                <?php
+                // Query to get read books for the user
+                $sqlReadBooks = "SELECT b.title, b.cover, b.author FROM readbooks rb
+                                 JOIN books b ON rb.bookID = b.bookID
+                                 WHERE rb.userID = ?";
+                
+                // Prepare the SQL statement
+                $stmtReadBooks = mysqli_prepare($conn, $sqlReadBooks);
+
+                // Bind parameters
+                mysqli_stmt_bind_param($stmtReadBooks, "i", $userID);
+
+                // Execute the statement
+                mysqli_stmt_execute($stmtReadBooks);
+
+                // Get the result
+                $resultReadBooks = mysqli_stmt_get_result($stmtReadBooks);
+
+                // Check if there are read books
+                if (mysqli_num_rows($resultReadBooks) > 0) {
+                    // Fetch and display each book
+                    while ($book = mysqli_fetch_assoc($resultReadBooks)) {
+                        ?>
+                        <li>
+                            <img src="<?php echo $book['cover']; ?>" alt="Cover" width="100">
+                            <strong><?php echo $book['title']; ?></strong> by <?php echo $book['author']; ?>
+                        </li>
+                        <?php
+                    }
+                } else {
+                    echo "<li>No read books found.</li>";
+                }
+                ?>
+                </ul>
             </div>
         </div>
     </body>
