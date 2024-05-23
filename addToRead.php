@@ -54,6 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                     if (mysqli_stmt_execute($insertStmt)) {
                         echo "Book successfully added to your 'Books to Read' list.";
+                        
                     } else {
                         echo "Error: " . mysqli_stmt_error($insertStmt);
                     }
