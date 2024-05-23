@@ -18,43 +18,62 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_SESSION['username'];
     $sql = "SELECT userID FROM users WHERE username = ?";
 
-if ($stmt = mysqli_prepare($conn, $sql)) {
-    // Bind the username parameter to the statement
-    mysqli_stmt_bind_param($stmt, "s", $username);
+    if ($stmt = mysqli_prepare($conn, $sql)) {
+        // Bind the username parameter to the statement
+        mysqli_stmt_bind_param($stmt, "s", $username);
 
-    // Execute the statement
-    mysqli_stmt_execute($stmt);
+        // Execute the statement
+        mysqli_stmt_execute($stmt);
 
-    // Bind the result variable
-    mysqli_stmt_bind_result($stmt, $userID);
+        // Bind the result variable
+        mysqli_stmt_bind_result($stmt, $userID);
 
-    $bookID = mysqli_real_escape_string($conn, $_POST['book_id']);
+        // Fetch the userID
+        mysqli_stmt_fetch($stmt);
 
-    // Check if the book is already in the user's list
-    $checkQuery = "SELECT * FROM bookstoread WHERE userID = ? AND bookID = ?";
-    $stmt = mysqli_prepare($conn, $checkQuery);
-    mysqli_stmt_bind_param($stmt, 'ii', $userID, $bookID);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_store_result($stmt);
+        // Close the statement
+        mysqli_stmt_close($stmt);
 
-    if (mysqli_stmt_num_rows($stmt) == 0) {
-        // Insert the book into the bookstoread table
-        $insertQuery = "INSERT INTO bookstoread (userID, bookID) VALUES (?, ?)";
-        $insertStmt = mysqli_prepare($conn, $insertQuery);
-        mysqli_stmt_bind_param($insertStmt, 'ii', $userID, $bookID);
+        $bookID = mysqli_real_escape_string($conn, $_POST['book_id']);
 
-        if (mysqli_stmt_execute($insertStmt)) {
-            echo "Book successfully added to your 'Books to Read' list.";
+        // Check if the book is already in the user's list
+        $checkQuery = "SELECT * FROM bookstoread WHERE userID = ? AND bookID = ?";
+        if ($stmt = mysqli_prepare($conn, $checkQuery)) {
+            mysqli_stmt_bind_param($stmt, 'ii', $userID, $bookID);
+            mysqli_stmt_execute($stmt);
+            mysqli_stmt_store_result($stmt);
+
+            if (mysqli_stmt_num_rows($stmt) == 0) {
+                // Close the statement before inserting
+                mysqli_stmt_close($stmt);
+
+                // Insert the book into the bookstoread table
+                $insertQuery = "INSERT INTO bookstoread (userID, bookID) VALUES (?, ?)";
+                if ($insertStmt = mysqli_prepare($conn, $insertQuery)) {
+                    mysqli_stmt_bind_param($insertStmt, 'ii', $userID, $bookID);
+
+                    if (mysqli_stmt_execute($insertStmt)) {
+                        echo "Book successfully added to your 'Books to Read' list.";
+                    } else {
+                        echo "Error: " . mysqli_stmt_error($insertStmt);
+                    }
+
+                    // Close the insert statement
+                    mysqli_stmt_close($insertStmt);
+                } else {
+                    echo "Error preparing insert statement: " . mysqli_error($conn);
+                }
+            } else {
+                echo "This book is already in your 'Books to Read' list.";
+                mysqli_stmt_close($stmt);
+            }
         } else {
-            echo "Error: " . mysqli_stmt_error($insertStmt);
+            echo "Error preparing check statement: " . mysqli_error($conn);
         }
     } else {
-        echo "This book is already in your 'Books to Read' list.";
+        echo "Error preparing user query statement: " . mysqli_error($conn);
     }
 
-    mysqli_stmt_close($stmt);
-    mysqli_stmt_close($insertStmt);
     mysqli_close($conn);
-} else {
-    echo "Invalid request.";
-}}
+}
+
