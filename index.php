@@ -22,7 +22,7 @@
                         <h2 class="text-white mt-0">We got what you need!</h2>
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-4">This website is an online Library! Here you can see books form other clients that have uploaded. You can upload after you have registered.</p>
-                        <a class="btn btn-light btn-xl" href="register.php">Get Started!</a>
+                        <a class="btn btn-light btn-xl" href="registration.php">Get Started!</a>
                     </div>
                 </div>
             </div>
