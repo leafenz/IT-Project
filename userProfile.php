@@ -1,7 +1,7 @@
 <?php
 include "db_connection.php";
+include "header.php";
 
-session_start();
 if (!isset($_SESSION['username'])) {
     header("Location: login.php"); // Redirect to the login page if not logged in
     exit();
@@ -165,4 +165,5 @@ if (mysqli_num_rows($result) > 0) {
 
 // Close the database connection
 mysqli_close($conn);
+include "footer.php";
 ?>
