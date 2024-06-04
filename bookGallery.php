@@ -1,5 +1,6 @@
 <?php
 include 'db_connection.php';
+include 'header.php';
 
 $conn = mysqli_connect($servername, $username, $password, $database);
 
@@ -42,27 +43,27 @@ $result = mysqli_query($conn, $query);
     <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <label for="genre">Genre:</label>
         <select name="genre" id="genre">
-            <option value="">Alle</option>
+            <option value="">All</option>
             <?php
             $genreQuery = "SELECT DISTINCT genre FROM books";
             $genreResult = mysqli_query($conn, $genreQuery);
             while ($row = mysqli_fetch_assoc($genreResult)) {
-                $selected = ($_GET['genre'] == $row['genre']) ? 'selected' : '';
+                $selected = (isset($_GET['genre']) && $_GET['genre'] == $row['genre']) ? 'selected' : '';
                 echo "<option value='" . $row['genre'] . "' $selected>" . $row['genre'] . "</option>";
             }
             ?>
         </select>
-        <button type="submit">Filtern</button>
+        <button type="submit">Filter</button>
     </form>
 
     <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-        <label for="search">Suche:</label>
+        <label for="search">Find:</label>
         <input type="text" name="search" id="search" value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
-        <button type="submit">Suchen</button>
+        <button type="submit">Search</button>
     </form>
 
     <?php if (mysqli_num_rows($result) > 0): ?>
-        <h2>Alle Bücher</h2>
+        <h2>All Books</h2>
         <table>
             <tr>
                 <th>Title</th>
@@ -72,6 +73,7 @@ $result = mysqli_query($conn, $query);
                 <th>Language</th>
                 <th>Synopsis</th>
                 <th>Cover</th>
+                <th>Action</th>
             </tr>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
                 <tr>
@@ -81,17 +83,68 @@ $result = mysqli_query($conn, $query);
                     <td><?php echo $row['publishYear']; ?></td>
                     <td><?php echo $row['language']; ?></td>
                     <td><?php echo $row['synopsis']; ?></td>
-                    <td><img src="<?php echo "pictures/" . $row['cover']; ?>" alt="Cover" width="100"></td>
+                    <td><img src="pictures/<?php echo $row['cover']; ?>" alt="Cover" width="100"></td>
+                    <td>
+                        <?php
+                        if (isset($_SESSION['username'])) {
+                            $username = $_SESSION['username'];
+                            $sql = "SELECT userID FROM users WHERE username = ?";
+                        
+                            if ($stmt = mysqli_prepare($conn, $sql)) {
+                                // Bind the username parameter to the statement
+                                mysqli_stmt_bind_param($stmt, "s", $username);
+                        
+                                // Execute the statement
+                                mysqli_stmt_execute($stmt);
+                        
+                                // Bind the result variable
+                                mysqli_stmt_bind_result($stmt, $userID);
+                        
+                                // Fetch the userID
+                                mysqli_stmt_fetch($stmt);
+                        
+                                // Close the statement
+                                mysqli_stmt_close($stmt);
+                        
+                                $bookID = $row['bookID'];
+                        
+                                $checkBookToReadQuery = "SELECT * FROM bookstoread WHERE userID='$userID' AND bookID='$bookID'";
+                                $checkReadBooksQuery = "SELECT * FROM readbooks WHERE userID='$userID' AND bookID='$bookID'";
+                        
+                                $bookToReadResult = mysqli_query($conn, $checkBookToReadQuery);
+                                $readBooksResult = mysqli_query($conn, $checkReadBooksQuery);
+                        
+                                if (mysqli_num_rows($readBooksResult) > 0) {
+                                    echo "Completed";
+                                } elseif (mysqli_num_rows($bookToReadResult) > 0) {
+                                    ?>
+                                    <form action="moveToFinished.php" method="post">
+                                        <input type="hidden" name="book_id" value="<?php echo $row['bookID']; ?>">
+                                        <button type="submit">Finished!</button>
+                                    </form>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <form action="addToRead_action.php" method="post">
+                                        <input type="hidden" name="book_id" value="<?php echo $row['bookID']; ?>">
+                                        <button type="submit">Add to "Books to Read"</button>
+                                    </form>
+                                    <?php
+                                }
+                            }
+                        }
+                        ?>
+                    </td>
                 </tr>
             <?php endwhile; ?>
         </table>
     <?php else: ?>
-        <p>Keine Bücher vorhanden</p>
+        <p>No books available</p>
     <?php endif; ?>
-
 </body>
 </html>
 
 <?php
+include "footer.php";
 mysqli_close($conn);
 ?>
