@@ -18,10 +18,11 @@ if(isset($_POST['submit'])) {
         header("Location: index.php");
         exit;
     } else {
-        echo "Incorrect username or password!";
+        $error_message = "Incorrect username or password!";
+        header("Location: login.php?error=$error_message");
+        exit;
     }
 
-    $stmt->close();
 } else {
     header("Location: login.php");
     exit;

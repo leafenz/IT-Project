@@ -16,6 +16,13 @@ include "header.php";
             <input type="submit" name="submit" id="submit" value="Login">
         </div>
     </form>
+
+    <?php
+    if (isset($_GET['error'])) {
+        echo "<p style='color: red;'>".$_GET['error']."</p>";
+    }
+   ?>
+
 </body>
 
 <?php 
