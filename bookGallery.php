@@ -25,7 +25,13 @@ if (!empty($conditions)) {
     $whereClause = 'WHERE ' . implode(' AND ', $conditions);
 }
 
-$query = "SELECT * FROM books $whereClause";
+$query = "
+    SELECT books.*, AVG(reviews.stars) AS averageRating
+    FROM books
+    LEFT JOIN reviews ON books.bookID = reviews.bookID
+    $whereClause
+    GROUP BY books.bookID
+";
 
 $result = mysqli_query($conn, $query);
 ?>
@@ -73,6 +79,7 @@ $result = mysqli_query($conn, $query);
                 <th>Language</th>
                 <th>Synopsis</th>
                 <th>Cover</th>
+                <th>Rating</th>
                 <th>Action</th>
             </tr>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>
@@ -84,6 +91,7 @@ $result = mysqli_query($conn, $query);
                     <td><?php echo $row['language']; ?></td>
                     <td><?php echo $row['synopsis']; ?></td>
                     <td><img src="pictures/<?php echo $row['cover']; ?>" alt="Cover" width="100"></td>
+                    <td><?php echo round($row['averageRating'], 2); ?> ★</td>
                     <td>
                         <?php
                         if (isset($_SESSION['username'])) {
