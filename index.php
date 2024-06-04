@@ -35,34 +35,34 @@
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi bi-person fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Login</h3>
+                            <a href="login.php">
+                                <div class="mb-2"><i class="bi bi-person fs-1 text-primary"></i></div>
+                                <h3 class="h4 mb-2">Login</h3>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi bi-person-plus fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Register</h3>
+                            <a href="registration.php">
+                                <div class="mb-2"><i class="bi bi-person-plus fs-1 text-primary"></i></div>
+                                <h3 class="h4 mb-2">Register</h3>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi-plus fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Add Books</h3>
+                            <a href="addBooks.php">
+                                <div class="mb-2"><i class="bi-plus fs-1 text-primary"></i></div>
+                                <h3 class="h4 mb-2">Add Books</h3>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <div class="mb-2"><i class="bi bi-book fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">View Books</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-<?php
-    include "footer.php";
-?>
+                            <a href="bookGallery.php">
+                                <div class="mb-2"><i class="bi bi-book fs-1 text-primary"></i></div>
+                                <h3 class="h4 mb-2">View Books</h3>
+                            </a>
                         </div>
                     </div>
                 </div>
