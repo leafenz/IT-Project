@@ -31,7 +31,7 @@
         <a href="index.php#about">About</a>
         </p>
         <p>
-          <a href="index.php#services">Services</a>
+          <a href="quizzes.php">Quizzes</a>
         </p>
 
       </div>
