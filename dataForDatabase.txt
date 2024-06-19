@@ -1,0 +1,45 @@
+SQL statment for books table:
+INSERT INTO books (bookID, title, author, genre, publishYear, language, cover, synopsis) VALUES
+(1, 'The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction', 1925, 'English', 'great_gatsby.jpg', 'A story about the young and mysterious millionaire Jay Gatsby and his quixotic passion for the beautiful Daisy Buchanan.'),
+(2, 'To Kill a Mockingbird', 'Harper Lee', 'Fiction', 1960, 'English', 'to_kill_a_mockingbird.jpg', 'A novel about the serious issues of rape and racial inequality narrated by the young Scout Finch.'),
+(3, '1984', 'George Orwell', 'Dystopian', 1949, 'English', '1984.jpg', 'A novel that tells the story of a dystopian future where truth is manipulated and oppression is accepted.'),
+(4, 'Pride and Prejudice', 'Jane Austen', 'Romance', 1913, 'English', 'pride_and_prejudice.jpg', 'A romantic novel that also critiques the British landed gentry at the end of the 18th century.'),
+(5, 'One Hundred Years of Solitude', 'Gabriel Garcia Marquez', 'Magical Realism', 1967, 'Spanish', 'one_hundred_years_of_solitude.jpg', 'The story of the Buendía family over several generations.'),
+(6, 'Moby-Dick', 'Herman Melville', 'Adventure', 1951, 'English', 'moby_dick.jpg', 'The narrative of Captain Ahab\'s obsessive quest to revenge the giant white whale Moby Dick.'),
+(7, 'War and Peace', 'Leo Tolstoy', 'Historical', 1969, 'Russian', 'war_and_peace.jpg', 'A chronicle of the French invasion of Russia and its impact on Tsarist society.'),
+(8, 'The Hobbit', 'J.R.R. Tolkien', 'Fantasy', 1937, 'English', 'the_hobbit.jpg', 'The adventure of Bilbo Baggins as he embarks on a quest to help a group of dwarves reclaim their homeland.'),
+(9, 'Don Quixote', 'Miguel de Cervantes', 'Classics', 1905, 'Spanish', 'don_quixote.jpg', 'A story about a man who becomes obsessed with chivalric ideals and sets out to revive knighthood.'),
+(10, 'The Catcher in the Rye', 'J.D. Salinger', 'Fiction', 1951, 'English', 'the_catcher_in_the_rye.jpg', 'The experiences of a young boy named Holden Caulfield who has been expelled from prep school.'),
+(11, 'The Picture of Dorian Gray', 'Oscar Wilde', 'Gothic Fiction', 1910, 'English', 'the_picture_of_dorian_gray.jpg', 'A story about a man who remains young and beautiful while his portrait ages and shows his moral corruption.'),
+(12, 'Brave New World', 'Aldous Huxley', 'Dystopian', 1932, 'English', 'brave_new_world.jpg', 'A novel that presents a futuristic World State of genetically modified citizens and an intelligence-based social hierarchy.'),
+(13, 'Harry Potter and the Philosopher\'s Stone', 'J.K. Rowling', 'Fantasy', 1997, 'English', 'harry_potter.jpg', 'The first book in the Harry Potter series, introducing Harry and his adventures at Hogwarts.'),
+(14, 'The Road', 'Cormac McCarthy', 'Post-Apocalyptic', 2006, 'English', 'the_road.jpg', 'A bleak narrative of a father and son journeying through a post-apocalyptic world.'),
+(15, 'The Testaments', 'Margaret Atwood', 'Dystopian', 2019, 'English', 'the_testaments.jpg', 'A sequel to "The Handmaid\'s Tale", it continues the story of life in the dystopian society of Gilead.');
+
+SQL statment for users table:
+INSERT INTO users (userID, username, firstname, lastname, passwordSHA, birthdate, type, sex, email) VALUES
+(1, 'Wiktoria123', 'Wiktoria', 'Niziolek', '8074a2720821d0fcfb9cd30a736ff65b7e763177425bff5534...', '2001-12-11', 0, 'F', 'wiktoria@gmail.com'),
+(2, 'Lea123', 'Lea', 'Fenz', '6506914577e7426996a22b3b47102564edb3fbcec1b9fdd6cf...', '2005-06-14', 0, 'F', 'lea@gmail.com'),
+(3, 'admin', 'Admin', 'of Admins', 'ebb1ed49594a5647f16e62de974678ab5e98c9ff68aa6a719e...', '2001-01-01', 1, 'D', 'admin@gmail.com');
+
+SQL statment for bookstoread table:
+INSERT INTO bookstoread (bookID, userID) VALUES
+(7, 2),
+(13, 2),
+(11, 2),
+(4, 1),
+(11, 1);
+
+SQL statment for readbooks table:
+INSERT INTO readbooks (userID, bookID) VALUES
+(2, 9),
+(2, 5),
+(1, 8),
+(1, 3),
+(1, 13);
+
+SQL statment for reviews table: 
+INSERT INTO reviews (reviewID, userID, bookID, stars, comment) VALUES
+(4, 2, 9, 7, 'It was nice but a bit boring at the end.'),
+(5, 1, 3, 5, 'Kinda tragic but not really my vibe.'),
+(6, 1, 8, 10, 'Amazing, show-stopping, completely unique, never the same.');

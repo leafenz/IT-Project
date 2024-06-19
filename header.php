@@ -20,6 +20,8 @@
         
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style-login.css">
+        <link rel="stylesheet" href="style-registration.css">
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -37,7 +39,7 @@
                         <li class="nav-item"><a class="nav-link" href="bookGallery.php">Book Gallery</a></li>
                         <?php
                             if(isset($_SESSION['username'])){
-                                echo '<li class="nav-item"><a class="nav-link" href="addBook.php">Add Books</a></li>';
+                                echo '<li class="nav-item"><a class="nav-link" href="addBooks.php">Add Books</a></li>';
                                 echo '<li class="nav-item"><a class="nav-link" href="userProfile.php">'.$_SESSION['username']."'s profile</a></li>";                             
                                 echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
                                 echo '<p>hello '.$_SESSION['username'].'!!!</p>';
