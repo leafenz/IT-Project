@@ -2,7 +2,7 @@
 include "header.php";
 ?>
 
-<body>
+<body class="form-page">
     <h1>Add a book</h1>
 
     <form id="addBookForm" action="addBooks_action.php" method="post">
@@ -27,7 +27,7 @@ include "header.php";
         <label for="synopsis">Synopsis:</label><br>
         <textarea id="synopsis" name="synopsis" rows="4" cols="50" required></textarea><br>
         
-        <input type="submit" name="submit" value="Add Book">
+        <input type="submit" name="submit" value="Add Book" class="submit-btn">
     </form>
 </body>
 
