@@ -20,6 +20,8 @@
         
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../ITP_Group8_BOOKWARM/css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style-login.css">
+        <link rel="stylesheet" href="style-registration.css">
     </head>
     <body id="page-top">
         <!-- Navigation-->

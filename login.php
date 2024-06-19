@@ -2,7 +2,7 @@
 include "header.php";
 ?>
 
-<body>
+<body class="login-page">
     <h1>Login</h1>
 
     <form id="loginForm" action="login_action.php" method="post">

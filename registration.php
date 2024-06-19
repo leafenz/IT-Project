@@ -2,18 +2,20 @@
 include "header.php";
 
 ?>
-<body>
+<body class="registration-page">
 <h1>Registration</h1>
 
 <form id="registrationForm" action="registration-action.php" method="post">
     <div class="infotext">
-        Salutation: <br>
+    <label for="gender">Gender</label><br>
+        <div class="radio-group">
+        <label for="woman">Female</label><br>
         <input type="radio" id="woman" name="salutation" value="woman">
-        <label for="woman">Woman</label><br>
+        <label for="men">Male</label><br>
         <input type="radio" id="men" name="salutation" value="men">
-        <label for="men">Men</label><br>
-        <input type="radio" id="divers" name="salutation" value="divers">
         <label for="divers">Divers</label><br>
+        <input type="radio" id="divers" name="salutation" value="divers">
+        </div>
         <label for="fname">First Name:</label>
         <input type="text" name="fname" id="fname" required>
         <br>

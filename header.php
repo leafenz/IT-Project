@@ -7,7 +7,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>Library</title>
+        <title>BOOKWARM</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -20,21 +20,26 @@
         
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style-login.css">
+        <link rel="stylesheet" href="style-registration.css">
     </head>
     <body id="page-top">
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <nav class="navbar navbar-expand-lg" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="index.php#page-top">Library</a>
+            <a class="navbar-brand" href="index.php#page-top">
+                    <img src="pictures/bookwarm-logo-new.png" alt="logo" class="logo"/>
+                    ...your cozy library
+                </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.php#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.php#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.php">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="bookGallery.php">Book Gallery</a></li>
                         <?php
                             if(isset($_SESSION['username'])){
-                                echo '<li class="nav-item"><a class="nav-link" href="addBook.php">Add Books</a></li>';
+                                echo '<li class="nav-item"><a class="nav-link" href="addBooks.php">Add Books</a></li>';
                                 echo '<li class="nav-item"><a class="nav-link" href="userProfile.php">'.$_SESSION['username']."'s profile</a></li>";                             
                                 echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
                                 echo '<p>hello '.$_SESSION['username'].'!!!</p>';

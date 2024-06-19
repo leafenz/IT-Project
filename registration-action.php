@@ -16,6 +16,19 @@ if(isset($_POST['submit'])) {
         exit;
     }
 
+    // Check if the username already exists
+    $stmt = $conn->prepare("SELECT COUNT(*) FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $stmt->bind_result($userCount);
+    $stmt->fetch();
+    $stmt->close();
+
+    if ($userCount > 0) {
+        header("Location: registration.php");
+        exit;
+    }
+
     $passwordSHA = hash('sha256', $password);
 
     $sex = "";

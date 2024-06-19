@@ -1,6 +1,6 @@
 <footer class="page-footer font-small" style="background-color:white; margin: 10px">
 
-  <div style="background-color: rgb(255,10,69)">
+  <div style="background-color: #967f71; margin-top: 30px">
     <div class="container">
 
       <div class="row py-4 d-flex align-items-center">
@@ -19,7 +19,7 @@
 
         <h6 class="text-uppercase font-weight-bold">Online Library</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-        <p>BOOKWARMWORM</p>
+        <p>BOOKWARM</p>
 
       </div>
 
@@ -31,7 +31,7 @@
         <a href="index.php#about">About</a>
         </p>
         <p>
-          <a href="quizzes.php">Quizzes</a>
+          <a href="quizzes.php">Quizes</a>
         </p>
 
       </div>
