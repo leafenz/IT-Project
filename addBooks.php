@@ -5,7 +5,7 @@ include "header.php";
 <body class="form-page">
     <h1>Add a book</h1>
 
-    <form id="addBookForm" action="addBooks_action.php" method="post">
+    <form id="addBookForm" action="addBooks_action.php" method="post" enctype="multipart/form-data">
         <label for="title">Title:</label><br>
         <input type="text" id="title" name="title" required><br>
         
@@ -22,7 +22,7 @@ include "header.php";
         <input type="text" id="language" name="language" required><br>
         
         <label for="cover">Cover:</label><br>
-        <input type="text" id="cover" name="cover" required><br>
+        <input type="file" id="cover" name="cover" accept="image/*" required><br>
         
         <label for="synopsis">Synopsis:</label><br>
         <textarea id="synopsis" name="synopsis" rows="4" cols="50" required></textarea><br>
