@@ -36,17 +36,10 @@ $query = "
 $result = mysqli_query($conn, $query);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Library</title>
-</head>
-<body>
-    <h1>Book Library</h1>
+<body class="book-library-body">
+    <h1 class="book-library-header">Book Library</h1>
 
-    <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="book-library-form">
         <label for="genre">Genre:</label>
         <select name="genre" id="genre">
             <option value="">All</option>
@@ -62,15 +55,15 @@ $result = mysqli_query($conn, $query);
         <button type="submit">Filter</button>
     </form>
 
-    <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+    <form method="get" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="book-library-form">
         <label for="search">Find:</label>
         <input type="text" name="search" id="search" value="<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>">
         <button type="submit">Search</button>
     </form>
 
     <?php if (mysqli_num_rows($result) > 0): ?>
-        <h2>All Books</h2>
-        <table>
+        <h2 class="book-library-subheader">All Books</h2>
+        <table class="book-library-table">
             <tr>
                 <th>Title</th>
                 <th>Author</th>
@@ -90,7 +83,7 @@ $result = mysqli_query($conn, $query);
                     <td><?php echo $row['publishYear']; ?></td>
                     <td><?php echo $row['language']; ?></td>
                     <td><?php echo $row['synopsis']; ?></td>
-                    <td><img src="pictures/<?php echo $row['cover']; ?>" alt="Cover" width="100"></td>
+                    <td><img src="pictures/<?php echo $row['cover']; ?>" alt="Cover"></td>
                     <td><?php echo round($row['averageRating'], 2); ?> ★</td>
                     <td>
                         <?php
@@ -128,14 +121,14 @@ $result = mysqli_query($conn, $query);
                                     ?>
                                     <form action="moveToFinished.php" method="post">
                                         <input type="hidden" name="book_id" value="<?php echo $row['bookID']; ?>">
-                                        <button type="submit">Finished!</button>
+                                        <button type="submit" class="book-library-button">Finished!</button>
                                     </form>
                                     <?php
                                 } else {
                                     ?>
                                     <form action="addToRead_action.php" method="post">
                                         <input type="hidden" name="book_id" value="<?php echo $row['bookID']; ?>">
-                                        <button type="submit">Add to "Books to Read"</button>
+                                        <button type="submit" class="book-library-button">Add to "Books to Read"</button>
                                     </form>
                                     <?php
                                 }
@@ -147,7 +140,7 @@ $result = mysqli_query($conn, $query);
             <?php endwhile; ?>
         </table>
     <?php else: ?>
-        <p>No books available</p>
+        <p class="book-library-subheader">No books available</p>
     <?php endif; ?>
 </body>
 </html>

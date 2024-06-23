@@ -35,14 +35,12 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="about.php">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="services.php">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="bookGallery.php">Book Gallery</a></li>
                         <?php
                             if(isset($_SESSION['username'])){
                                 echo '<li class="nav-item"><a class="nav-link" href="addBooks.php">Add Books</a></li>';
-                                echo '<li class="nav-item"><a class="nav-link" href="userProfile.php">'.$_SESSION['username']."'s profile</a></li>";                             
-                                echo '<li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
-                                echo '<p>hello '.$_SESSION['username'].'!!!</p>';
+                                echo '<li class="nav-item"><a class="nav-link" href="userProfile.php">'.$_SESSION['username']."'s Profile</a></li>";                             
+                                echo '<li class="nav-item"><a class="nav-link" href="logout.php">Log Out</a></li>';
                             }
                             else{
                                 echo '<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>';

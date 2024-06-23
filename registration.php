@@ -7,15 +7,12 @@ include "header.php";
 
 <form id="registrationForm" action="registration-action.php" method="post">
     <div class="infotext">
-    <label for="gender">Gender</label><br>
-        <div class="radio-group">
-        <label for="woman">Female</label><br>
-        <input type="radio" id="woman" name="salutation" value="woman">
-        <label for="men">Male</label><br>
-        <input type="radio" id="men" name="salutation" value="men">
-        <label for="divers">Divers</label><br>
-        <input type="radio" id="divers" name="salutation" value="divers">
-        </div>
+    <label for="salutation" class="gender-label">Gender:</label>
+            <select id="salutation" name="salutation" required class="gender-select">
+                <option value="woman">Female</option>
+                <option value="men">Male</option>
+                <option value="divers">Divers</option>
+            </select>
         <label for="fname">First Name:</label>
         <input type="text" name="fname" id="fname" required>
         <br>
