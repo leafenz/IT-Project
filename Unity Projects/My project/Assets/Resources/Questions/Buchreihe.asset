@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe22a96953f2854984da425cabe2d7b, type: 3}
+  m_Name: Buchreihe
+  m_EditorClassIdentifier: 
+  _info: 'Welche ist die bekannteste Buchreihe? '
+  _answers:
+  - _info: '"Twilight" von Stephenie Meyer'
+    _isCorrect: 0
+  - _info: '"Harry Potter" von J.K. Rowling'
+    _isCorrect: 1
+  - _info: '"Percy Jackson" von Rick Riordan'
+    _isCorrect: 0
+  - _info: '"The Hunger Games" von Suzanne Collins'
+    _isCorrect: 0
+  _useTimer: 1
+  _timer: 10
+  _answerType: 0
+  _addScore: 10
