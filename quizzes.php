@@ -3,6 +3,7 @@
 ?>
 <body>
 <iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/2797731"><a href="https://vee22.itch.io/generalquiz">General Quiz</a></iframe>
+    <iframe width="552" height="167" frameborder="0" src="https://itch.io/embed/2797801"><a href="https://vee22.itch.io/percyjackson">PercyJackson by Vee22</a></iframe>
 </body>
 <?php
     include "footer.php"

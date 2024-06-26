@@ -11,13 +11,13 @@ C:\Program Files\Unity\Hub\Editor\2022.3.22f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/grani/Desktop/IT-Project/IT-Project/Unity Projects/My project
+C:/Users/grani/Desktop/Unity Projects/PercyJackson
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51827
-Successfully changed project path to: C:/Users/grani/Desktop/IT-Project/IT-Project/Unity Projects/My project
-C:/Users/grani/Desktop/IT-Project/IT-Project/Unity Projects/My project
+53253
+Successfully changed project path to: C:/Users/grani/Desktop/Unity Projects/PercyJackson
+C:/Users/grani/Desktop/Unity Projects/PercyJackson
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -49,16 +49,16 @@ C:/Users/grani/Desktop/IT-Project/IT-Project/Unity Projects/My project
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [29436] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1611187539 [EditorId] 1611187539 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-9CDV3T1K) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [9936] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 929436894 [EditorId] 929436894 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-9CDV3T1K) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [29436] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 1611187539 [EditorId] 1611187539 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-9CDV3T1K) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [9936] Host "[IP] 192.168.56.1 [Port] 0 [Flags] 2 [Guid] 929436894 [EditorId] 929436894 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-9CDV3T1K) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
-Refreshing native plugins compatible for Editor in 36.41 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 38.78 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.22f1 (887be4894c44)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.22f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/grani/Desktop/IT-Project/IT-Project/Unity Projects/My project/Assets
+[Subsystems] Discovering subsystems at path C:/Users/grani/Desktop/Unity Projects/PercyJackson/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.22f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.22f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56132
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.013814 seconds.
-- Loaded All Assemblies, in  0.800 seconds
+Registered in 0.014929 seconds.
+- Loaded All Assemblies, in  0.760 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.629 seconds
-Domain Reload Profiling: 1427ms
-	BeginReloadAssembly (270ms)
+- Finished resetting the current domain, in  0.652 seconds
+Domain Reload Profiling: 1410ms
+	BeginReloadAssembly (255ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (81ms)
-	RebuildNativeTypeToScriptingClass (23ms)
-	initialDomainReloadingComplete (119ms)
-	LoadAllAssembliesAndSetupDomain (302ms)
-		LoadAssemblies (266ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (69ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (114ms)
+	LoadAllAssembliesAndSetupDomain (298ms)
+		LoadAssemblies (251ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (300ms)
-			TypeCache.Refresh (297ms)
-				TypeCache.ScanAssembly (270ms)
+		AnalyzeDomain (294ms)
+			TypeCache.Refresh (291ms)
+				TypeCache.ScanAssembly (262ms)
 			ScanForSourceGeneratedMonoScriptInfo (1ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (631ms)
+	FinalizeReload (653ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (518ms)
+		SetupLoadedEditorAssemblies (509ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (18ms)
-			SetLoadedEditorAssemblies (19ms)
+			SetLoadedEditorAssemblies (17ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (3ms)
-			ProcessInitializeOnLoadAttributes (364ms)
-			ProcessInitializeOnLoadMethodAttributes (114ms)
+			BeforeProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (323ms)
+			ProcessInitializeOnLoadMethodAttributes (145ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,55 +115,55 @@ Domain Reload Profiling: 1427ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.611 seconds
-Refreshing native plugins compatible for Editor in 8.96 ms, found 4 plugins.
+- Loaded All Assemblies, in  2.084 seconds
+Refreshing native plugins compatible for Editor in 12.84 ms, found 4 plugins.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.274 seconds
-Domain Reload Profiling: 2877ms
-	BeginReloadAssembly (311ms)
+- Finished resetting the current domain, in  2.279 seconds
+Domain Reload Profiling: 4356ms
+	BeginReloadAssembly (593ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
+		DisableScriptedObjects (15ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (45ms)
-	RebuildCommonClasses (68ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (113ms)
-	LoadAllAssembliesAndSetupDomain (1092ms)
-		LoadAssemblies (866ms)
+		CreateAndSetChildDomain (68ms)
+	RebuildCommonClasses (134ms)
+	RebuildNativeTypeToScriptingClass (29ms)
+	initialDomainReloadingComplete (111ms)
+	LoadAllAssembliesAndSetupDomain (1209ms)
+		LoadAssemblies (1114ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (406ms)
-			TypeCache.Refresh (349ms)
-				TypeCache.ScanAssembly (311ms)
-			ScanForSourceGeneratedMonoScriptInfo (43ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1275ms)
+		AnalyzeDomain (503ms)
+			TypeCache.Refresh (428ms)
+				TypeCache.ScanAssembly (386ms)
+			ScanForSourceGeneratedMonoScriptInfo (57ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (2280ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (953ms)
+		SetupLoadedEditorAssemblies (1731ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (7ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (13ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (122ms)
-			ProcessInitializeOnLoadAttributes (712ms)
-			ProcessInitializeOnLoadMethodAttributes (89ms)
-			AfterProcessingInitializeOnLoad (11ms)
-			EditorAssembliesLoaded (1ms)
+			BeforeProcessingInitializeOnLoad (221ms)
+			ProcessInitializeOnLoadAttributes (1357ms)
+			ProcessInitializeOnLoadMethodAttributes (105ms)
+			AfterProcessingInitializeOnLoad (16ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (19ms)
+		AwakeInstancesAfterBackupRestoration (26ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
-Refreshing native plugins compatible for Editor in 26.00 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 18.77 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4086 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 70 unused Assets / (244.6 KB). Loaded Objects now: 4542.
-Memory consumption went from 148.3 MB to 148.1 MB.
-Total: 11.516300 ms (FindLiveObjects: 0.860900 ms CreateObjectMapping: 0.965100 ms MarkObjects: 9.285200 ms  DeleteObjects: 0.402900 ms)
+Unloading 70 unused Assets / (244.8 KB). Loaded Objects now: 4542.
+Memory consumption went from 148.2 MB to 148.0 MB.
+Total: 13.293100 ms (FindLiveObjects: 0.863200 ms CreateObjectMapping: 0.936200 ms MarkObjects: 10.822600 ms  DeleteObjects: 0.668200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
@@ -180,258 +180,153 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 1159845.787908 seconds.
-  path: Assets/Resources/Questions/HarryPotter1.asset
-  artifactKey: Guid(dfa1c12b1a065e449b03e0e01d35d827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/HarryPotter1.asset using Guid(dfa1c12b1a065e449b03e0e01d35d827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a159f4bf6bb16ea373fd17c8da8fd0a9') in 0.028651 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 1.508787 seconds.
-  path: Assets/Resources/Questions/New.asset
-  artifactKey: Guid(d0088d7eef2882f46879b4657e5face8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/New.asset using Guid(d0088d7eef2882f46879b4657e5face8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98dae892b49b059cfb99a92b0d1db6dc') in 0.001633 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 4.647023 seconds.
-  path: Assets/Resources/Questions/HarryPotter2.asset
-  artifactKey: Guid(d0088d7eef2882f46879b4657e5face8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/HarryPotter2.asset using Guid(d0088d7eef2882f46879b4657e5face8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4bdc709f8a8ebc97a62de2b8f1793acb') in 0.001457 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.072543 seconds.
-  path: Assets/Resources/Questions/test.asset
-  artifactKey: Guid(4f2cf523917871247a3861f5cbb5909d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/test.asset using Guid(4f2cf523917871247a3861f5cbb5909d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '312a7d3b2e496ab6fe4647f4b3b63d45') in 0.001379 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.508366 seconds.
-  path: Assets/Resources/Questions/Fitzek.asset
-  artifactKey: Guid(4f2cf523917871247a3861f5cbb5909d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Fitzek.asset using Guid(4f2cf523917871247a3861f5cbb5909d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42697c6874364a0f8cff6f2f0822af20') in 0.001412 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 4.850256 seconds.
-  path: Assets/Resources/Questions/Fitzek 1.asset
-  artifactKey: Guid(7554f01c1d4586946baedf9da1f657ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Fitzek 1.asset using Guid(7554f01c1d4586946baedf9da1f657ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1aa8a7bc0f24e2983ea1c86b0bedba6') in 0.001566 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.854429 seconds.
-  path: Assets/Resources/Questions/Fitzek 2.asset
-  artifactKey: Guid(13700129c543c3444a7569621787b2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Fitzek 2.asset using Guid(13700129c543c3444a7569621787b2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01a55c59a769bf58ba3a4d86bfd8302b') in 0.001320 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 8.510443 seconds.
-  path: Assets/Resources/Questions/Fitzek 3.asset
-  artifactKey: Guid(b7d8b286426f3564da078e95b52d6bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Fitzek 3.asset using Guid(b7d8b286426f3564da078e95b52d6bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20456271e9d7a3ea1acfc5812e3d1bf6') in 0.001245 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.453912 seconds.
-  path: Assets/Resources/Questions/Fitzek 4.asset
-  artifactKey: Guid(bad8548344c2cdf4ab0647b6bed4ad88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Fitzek 4.asset using Guid(bad8548344c2cdf4ab0647b6bed4ad88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0143d0bb0e3961944c6225b78ae746f4') in 0.001266 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.441914 seconds.
-  path: Assets/Resources/Questions/Fitzek 5.asset
-  artifactKey: Guid(91112022249ad14499d2eca27af9de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Fitzek 5.asset using Guid(91112022249ad14499d2eca27af9de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1b03b2f9a84f0d4ae1d3b4fb41b02ac') in 0.001284 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.405123 seconds.
-  path: Assets/Resources/Questions/Fitzek 6.asset
-  artifactKey: Guid(d67d9f3d315f90343961d7ab0b2b7782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Fitzek 6.asset using Guid(d67d9f3d315f90343961d7ab0b2b7782) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd68eba13842cc7ed58fa660b7d323e4c') in 0.002687 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 0.462356 seconds.
-  path: Assets/Resources/Questions/Fitzek 7.asset
-  artifactKey: Guid(d7845d54b1c2c87479b6e00107248b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Fitzek 7.asset using Guid(d7845d54b1c2c87479b6e00107248b7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d982b3119e2663a06d3e8ab74c1f986') in 0.002307 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 13.415103 seconds.
-  path: Assets/Resources/Questions/JojoMoyes.asset
-  artifactKey: Guid(7554f01c1d4586946baedf9da1f657ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/JojoMoyes.asset using Guid(7554f01c1d4586946baedf9da1f657ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c255271f51826ec0ebf73a2d528df93e') in 0.001367 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.630999 seconds.
-  path: Assets/Resources/Questions/JojoMoyes2.asset
-  artifactKey: Guid(13700129c543c3444a7569621787b2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/JojoMoyes2.asset using Guid(13700129c543c3444a7569621787b2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6140cf181b469231cce061fe9c17e402') in 0.001456 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 18.531855 seconds.
-  path: Assets/Resources/Questions/Zumsande.asset
-  artifactKey: Guid(b7d8b286426f3564da078e95b52d6bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Zumsande.asset using Guid(b7d8b286426f3564da078e95b52d6bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5655f82b8240130f5b4262efac890a2d') in 0.001331 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 12.513946 seconds.
-  path: Assets/Resources/Questions/Gutenberg.asset
-  artifactKey: Guid(b7d8b286426f3564da078e95b52d6bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Gutenberg.asset using Guid(b7d8b286426f3564da078e95b52d6bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8530b57c8648f21cf94917660c9fef62') in 0.001650 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 12.991017 seconds.
+  Time since last request: 1204826.321208 seconds.
   path: Assets/Resources/Questions/Bibliothek.asset
   artifactKey: Guid(bad8548344c2cdf4ab0647b6bed4ad88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Bibliothek.asset using Guid(bad8548344c2cdf4ab0647b6bed4ad88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0bab0dc7e903e011162aefa101c4076') in 0.001306 seconds
+Start importing Assets/Resources/Questions/Bibliothek.asset using Guid(bad8548344c2cdf4ab0647b6bed4ad88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afdfd082dacc72390f6555b261e1130a') in 0.038284 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 15.363163 seconds.
+  Time since last request: 4.462142 seconds.
+  path: Assets/Resources/Questions/Elternteil.asset
+  artifactKey: Guid(bad8548344c2cdf4ab0647b6bed4ad88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/Elternteil.asset using Guid(bad8548344c2cdf4ab0647b6bed4ad88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b22ca09cdb35a8fedad6c618abaf76a9') in 0.001406 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 50.939075 seconds.
   path: Assets/Resources/Questions/Buchreihe.asset
   artifactKey: Guid(91112022249ad14499d2eca27af9de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Buchreihe.asset using Guid(91112022249ad14499d2eca27af9de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec1c3866096429237170b1d37258ab5b') in 0.001418 seconds
+Start importing Assets/Resources/Questions/Buchreihe.asset using Guid(91112022249ad14499d2eca27af9de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8fc998e5737b44f9214993fe2414ca0') in 0.001349 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 489.405372 seconds.
-  path: Assets/Resources/Questions/Fitzek 1.asset
-  artifactKey: Guid(fdf1f1cd49ff00e4aa61c53dbeec8202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Fitzek 1.asset using Guid(fdf1f1cd49ff00e4aa61c53dbeec8202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cb5c9116a1fc2100a806019d640d353') in 0.002715 seconds
+  Time since last request: 6.373192 seconds.
+  path: Assets/Resources/Questions/WeißeHaare.asset
+  artifactKey: Guid(91112022249ad14499d2eca27af9de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/WeißeHaare.asset using Guid(91112022249ad14499d2eca27af9de2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3968f31869a82cdc87edd974e7a9e44e') in 0.002084 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 3.785301 seconds.
-  path: Assets/Resources/Questions/Zumstande.asset
-  artifactKey: Guid(fdf1f1cd49ff00e4aa61c53dbeec8202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/Zumstande.asset using Guid(fdf1f1cd49ff00e4aa61c53dbeec8202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54da15728940dea4a9551ced1df9db13') in 0.002474 seconds
+  Time since last request: 79.112984 seconds.
+  path: Assets/Resources/Questions/Fitzek.asset
+  artifactKey: Guid(4f2cf523917871247a3861f5cbb5909d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/Fitzek.asset using Guid(4f2cf523917871247a3861f5cbb5909d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '065f83271d0092ff30906d245ef84f42') in 0.001717 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 14.138637 seconds.
-  path: Assets/Resources/Questions/JojoMoyes2.asset
+  Time since last request: 4.256205 seconds.
+  path: Assets/Resources/Questions/Geschenk.asset
+  artifactKey: Guid(4f2cf523917871247a3861f5cbb5909d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/Geschenk.asset using Guid(4f2cf523917871247a3861f5cbb5909d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9605cc502ad8464d9e26b6342c18f2f') in 0.001226 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 33.433760 seconds.
+  path: Assets/Resources/Questions/Gutenberg.asset
+  artifactKey: Guid(b7d8b286426f3564da078e95b52d6bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/Gutenberg.asset using Guid(b7d8b286426f3564da078e95b52d6bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac3677c5d353bc1d14d48c59e572862e') in 0.001375 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 4.616202 seconds.
+  path: Assets/Resources/Questions/Olympier.asset
+  artifactKey: Guid(b7d8b286426f3564da078e95b52d6bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/Olympier.asset using Guid(b7d8b286426f3564da078e95b52d6bab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca1960965b78981a4c2b182d838747b1') in 0.001301 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 48.256929 seconds.
+  path: Assets/Resources/Questions/KindDrei.asset
+  artifactKey: Guid(dfa1c12b1a065e449b03e0e01d35d827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/KindDrei.asset using Guid(dfa1c12b1a065e449b03e0e01d35d827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b95358afe2f03249128d2a0fa14c72d7') in 0.001477 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 90.857576 seconds.
+  path: Assets/Resources/Questions/HarryPotter2.asset
+  artifactKey: Guid(d0088d7eef2882f46879b4657e5face8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/HarryPotter2.asset using Guid(d0088d7eef2882f46879b4657e5face8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a3f529a9fec9382f8878433237f0020') in 0.001425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 4.902117 seconds.
+  path: Assets/Resources/Questions/HermesHütte.asset
+  artifactKey: Guid(d0088d7eef2882f46879b4657e5face8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/HermesHütte.asset using Guid(d0088d7eef2882f46879b4657e5face8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4581697a7ec34965314cde45bc624af5') in 0.001535 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 30.974835 seconds.
+  path: Assets/Resources/Questions/JojoMoyes.asset
+  artifactKey: Guid(7554f01c1d4586946baedf9da1f657ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/JojoMoyes.asset using Guid(7554f01c1d4586946baedf9da1f657ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '159b9eba8cf4c386baf2b82720b20338') in 0.001485 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 3.690244 seconds.
+  path: Assets/Resources/Questions/Geburtstag.asset
+  artifactKey: Guid(7554f01c1d4586946baedf9da1f657ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/Geburtstag.asset using Guid(7554f01c1d4586946baedf9da1f657ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e74b535cd55303fada62b55deded71f7') in 0.002589 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 52.856797 seconds.
+  path: Assets/Resources/Questions/Lieblingsspiel.asset
   artifactKey: Guid(13700129c543c3444a7569621787b2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/JojoMoyes2.asset using Guid(13700129c543c3444a7569621787b2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '200ffaec6eccfd6d5d97fcaec00fb689') in 0.001204 seconds
+Start importing Assets/Resources/Questions/Lieblingsspiel.asset using Guid(13700129c543c3444a7569621787b2e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa865dcecda2df4f2272007fced702e3') in 0.001849 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 3.802381 seconds.
-  path: Assets/Resources/Questions/JojoMoyes2 1.asset
-  artifactKey: Guid(e7574c1054dd314498835582a3e00dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/JojoMoyes2 1.asset using Guid(e7574c1054dd314498835582a3e00dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c416b0494a7e7738c614ff24ae4b121') in 0.001833 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 1
-========================================================================
-Received Import Request.
-  Time since last request: 6.252731 seconds.
+  Time since last request: 45.938222 seconds.
   path: Assets/Resources/Questions/JojoMoyes3.asset
   artifactKey: Guid(e7574c1054dd314498835582a3e00dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/JojoMoyes3.asset using Guid(e7574c1054dd314498835582a3e00dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58839875415cf86418a5ec38c20952ca') in 0.001586 seconds
+Start importing Assets/Resources/Questions/JojoMoyes3.asset using Guid(e7574c1054dd314498835582a3e00dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebbf2de58992e2e6f0475b45078a44a4') in 0.001622 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
 Received Import Request.
-  Time since last request: 348.194823 seconds.
-  path: Assets/Resources/Questions/HarryPotter1.asset
-  artifactKey: Guid(dfa1c12b1a065e449b03e0e01d35d827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Questions/HarryPotter1.asset using Guid(dfa1c12b1a065e449b03e0e01d35d827) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9eff7fa455eb9f3749e6de2270377d1') in 0.001903 seconds
+  Time since last request: 5.643490 seconds.
+  path: Assets/Resources/Questions/SchlechteEigenschaft.asset
+  artifactKey: Guid(e7574c1054dd314498835582a3e00dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/SchlechteEigenschaft.asset using Guid(e7574c1054dd314498835582a3e00dbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a3a668bd321ddff46323dfebdc44844') in 0.002837 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 1
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.924 seconds
-Refreshing native plugins compatible for Editor in 8.08 ms, found 4 plugins.
-Native extension for WindowsStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.098 seconds
-Domain Reload Profiling: 4018ms
-	BeginReloadAssembly (303ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (17ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (71ms)
-	RebuildCommonClasses (62ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (58ms)
-	LoadAllAssembliesAndSetupDomain (476ms)
-		LoadAssemblies (625ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (24ms)
-			TypeCache.Refresh (11ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (9ms)
-	FinalizeReload (3099ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (992ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (14ms)
-			SetLoadedEditorAssemblies (9ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (153ms)
-			ProcessInitializeOnLoadAttributes (713ms)
-			ProcessInitializeOnLoadMethodAttributes (86ms)
-			AfterProcessingInitializeOnLoad (17ms)
-			EditorAssembliesLoaded (1ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (39ms)
-Refreshing native plugins compatible for Editor in 10.96 ms, found 4 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4067 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 42 unused Assets / (216.7 KB). Loaded Objects now: 4548.
-Memory consumption went from 145.6 MB to 145.4 MB.
-Total: 9.453300 ms (FindLiveObjects: 1.897600 ms CreateObjectMapping: 0.926800 ms MarkObjects: 5.711200 ms  DeleteObjects: 0.915200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 9a22284fe3817be447336de3de66b15e -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+Received Import Request.
+  Time since last request: 79.975235 seconds.
+  path: Assets/Resources/Questions/Zumstande.asset
+  artifactKey: Guid(fdf1f1cd49ff00e4aa61c53dbeec8202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/Zumstande.asset using Guid(fdf1f1cd49ff00e4aa61c53dbeec8202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b340d8274f9645fb2648f19aafdd87d') in 0.002613 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 4.338232 seconds.
+  path: Assets/Resources/Questions/Ablehnung.asset
+  artifactKey: Guid(fdf1f1cd49ff00e4aa61c53dbeec8202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/Ablehnung.asset using Guid(fdf1f1cd49ff00e4aa61c53dbeec8202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0247371d8e5d55072b121277f744b37a') in 0.001441 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 75.174073 seconds.
+  path: Assets/Resources/Questions/Ablehnung.asset
+  artifactKey: Guid(fdf1f1cd49ff00e4aa61c53dbeec8202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Questions/Ablehnung.asset using Guid(fdf1f1cd49ff00e4aa61c53dbeec8202) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2327f384e6e057698d0d3385dbf6ded0') in 0.001496 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
