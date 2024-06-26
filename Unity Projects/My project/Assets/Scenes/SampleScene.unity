@@ -784,7 +784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19245279, g: 0.16812384, b: 0.16812384, a: 1}
+  m_Color: {r: 0.2905661, g: 0.24232115, b: 0.21216807, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1247,9 +1247,9 @@ MonoBehaviour:
     finishUIElements: {fileID: 16992284}
   parameters:
     margins: 10
-    correctBGColor: {r: 0.29424706, g: 0.83396226, b: 0.30558294, a: 0}
-    incorrectBGColor: {r: 0.83396226, g: 0.1998362, b: 0.1998362, a: 0}
-    finalBGColor: {r: 0.043137256, g: 0.40392157, b: 0.7137255, a: 1}
+    correctBGColor: {r: 0.48873615, g: 0.98490566, b: 0.4995225, a: 0}
+    incorrectBGColor: {r: 0.96981126, g: 0.40073332, b: 0.40073332, a: 0}
+    finalBGColor: {r: 0.7490196, g: 0.42352942, b: 0.6313726, a: 1}
 --- !u!114 &919994836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1348,7 +1348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.40392157, g: 0.34117648, b: 0.3019608, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1470,7 +1470,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2127474397}
   m_Father: {fileID: 1249469194}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1491,7 +1492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.08969025, g: 0.09648179, b: 0.19245279, a: 1}
+  m_Color: {r: 0.5924529, g: 0.37447494, b: 0.5114897, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1848,7 +1849,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1803545092}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999545
+  m_Size: 0.99527925
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2107,7 +2108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.1386026, b: 0.3056603, a: 1}
+  m_Color: {r: 0.9019608, g: 0.56078434, b: 0.7764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2161,7 +2162,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1046388411}
-  - {fileID: 2127474397}
   - {fileID: 1079545060}
   m_Father: {fileID: 1097099786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2222,7 +2222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5999999, g: 0.27509424, b: 0.27509424, a: 1}
+  m_Color: {r: 0.9019608, g: 0.56078434, b: 0.7764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2429,7 +2429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.04171587, g: 0.40419325, b: 0.7132075, a: 1}
+  m_Color: {r: 0.7509433, g: 0.42364538, b: 0.6305579, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3146,7 +3146,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127474396}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3154,7 +3154,7 @@ RectTransform:
   - {fileID: 1117677155}
   - {fileID: 1228812227}
   - {fileID: 1402135931}
-  m_Father: {fileID: 1249469194}
+  m_Father: {fileID: 1046388411}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3174,7 +3174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.15471691, g: 0.13515835, b: 0.13515835, a: 1}
+  m_Color: {r: 0.4037736, g: 0.33984107, b: 0.3009256, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
