@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe22a96953f2854984da425cabe2d7b, type: 3}
+  m_Name: "Hinterf\xFChrung"
+  m_EditorClassIdentifier: 
+  _info: "Was war Nina\u2019s Grund Millie zu hinterf\xFChren? "
+  _answers:
+  - _info: aus Eifersucht
+    _isCorrect: 0
+  - _info: aus Rache an Millie
+    _isCorrect: 0
+  - _info: "Um mit ihrer Tochter fl\xFCchten zu k\xF6nnen"
+    _isCorrect: 1
+  - _info: aus purer Langeweile
+    _isCorrect: 0
+  _useTimer: 1
+  _timer: 10
+  _answerType: 0
+  _addScore: 10

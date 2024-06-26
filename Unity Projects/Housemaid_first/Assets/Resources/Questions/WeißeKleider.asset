@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe22a96953f2854984da425cabe2d7b, type: 3}
+  m_Name: "Wei\xDFeKleider"
+  m_EditorClassIdentifier: 
+  _info: "Wieso trug Nina\u2019s Tochter ausschlie\xDFlich wei\xDFe Kleider und durfte
+    nicht spielen? "
+  _answers:
+  - _info: "Man wollte den Schein einer \u201Eperfekten Familie\u201C bewahren "
+    _isCorrect: 1
+  - _info: Sie wollte es nicht anders
+    _isCorrect: 0
+  - _info: Weil sie schwer krank war
+    _isCorrect: 0
+  - _info: Sie spielte gerne Geist
+    _isCorrect: 0
+  _useTimer: 1
+  _timer: 10
+  _answerType: 0
+  _addScore: 10
