@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfe22a96953f2854984da425cabe2d7b, type: 3}
+  m_Name: Lehrer
+  m_EditorClassIdentifier: 
+  _info: "Wie hei\xDFt der Lehrer, der das Fach \"Verteidigung gegen die Dunklen
+    K\xFCnste\" unterrichtet (erstes Schuljahr von Harry)?"
+  _answers:
+  - _info: Professor Lupin
+    _isCorrect: 0
+  - _info: Professor Snape
+    _isCorrect: 0
+  - _info: Professor Quirrell
+    _isCorrect: 1
+  - _info: Professor Lockhart
+    _isCorrect: 0
+  _useTimer: 1
+  _timer: 10
+  _answerType: 0
+  _addScore: 10
